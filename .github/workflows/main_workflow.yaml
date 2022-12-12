@@ -1,3 +1,4 @@
+name: main_workflow
 on:
   push:
     branches:
@@ -6,6 +7,7 @@ on:
 jobs:
   build:
     name: linter-execution
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
