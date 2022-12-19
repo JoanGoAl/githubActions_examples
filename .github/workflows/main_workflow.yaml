@@ -14,8 +14,9 @@ jobs:
         node-version: [10, 12]
     steps:
       - name: Checkout Code
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+        uses: actions/checkout@v2
+      - name: Node versions
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
       - name: Linter execution
