@@ -37,6 +37,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Run jest tests
         run: npm install jest && npm run test
+        if: failure()
+        run: echo "Tests failed"
 
   environment_test_execution:
     runs-on: ubuntu-latest
