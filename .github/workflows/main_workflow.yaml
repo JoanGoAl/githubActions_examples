@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - nodejs_jest_job
-  push:
     branches:
       - nodejs_linter_job
 
