@@ -38,7 +38,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Run jest tests
         id: test
-        run: npm install jest && npm run test
+        run: npm install jest && npm run test`
+        continue-on-error: true
       - name: Check if tests failed
         if: steps.test.outcome != 'success'
         run: echo "Tests failed Joan González"
