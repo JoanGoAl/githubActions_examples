@@ -40,8 +40,8 @@ jobs:
         id: jest
         run: npm install jest && npm run test
       - name: Check if tests failed
-        if: steps.jest.outputs.status == 'failure'
-        run: echo "Tests failed"
+        if: steps.jest.outcome != 'success'
+        run: echo "Tests failed Joan González"
 
   environment_test_execution:
     runs-on: ubuntu-latest
