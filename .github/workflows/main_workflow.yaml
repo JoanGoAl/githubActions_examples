@@ -37,10 +37,10 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
       - name: Run jest tests
-        id: jest
+        id: test
         run: npm install jest && npm run test
       - name: Check if tests failed
-        if: steps.jest.outcome != 'success'
+        if: steps.test.outcome != 'success'
         run: echo "Tests failed Joan González"
 
   environment_test_execution:
