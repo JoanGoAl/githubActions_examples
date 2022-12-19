@@ -5,6 +5,7 @@ on:
       - nodejs_jest_job
       - nodejs_linter_job
       - nodejs_nodeversions_job
+      - nodejs_environment_job
 
 jobs:
   linter-execution:
