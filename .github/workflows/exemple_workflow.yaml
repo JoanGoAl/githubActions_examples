@@ -11,7 +11,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
       - name: build
-        uses: npm install && npm run build
+        run: npm install && npm run build
       - name: Upload
         uses: actions/upload-artifact@v2
   deploy-job:
@@ -22,4 +22,3 @@ jobs:
         uses: actions/download-artifact@v2
       - name: Deploy
         uses: dswistowski/surge-sh-action@v1
-
