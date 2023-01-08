@@ -1,4 +1,4 @@
-name: main_workflow
+name: exemple_workflow
 on:
   push:
     branches:
